@@ -1,16 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"]</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    @await RenderSectionAsync("Css", required:false)
 </head>
 <body>
-    @RenderBody()
+    
+    <main class="container">
+        @* <partial name="_Nav" /> *@
+        @await Html.PartialAsync("_Nav")
+        @RenderBody()
+        <partial name="_Footer" />
+    </main>   
+    <script src="~/lib/bootstrap/js/bootstrap.min.js" rel="stylesheet"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

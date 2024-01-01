@@ -11,7 +11,11 @@ builder.Services
 
 var app = builder.Build();
 
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
+//app.UseStatusCodePagesWithRedirects("/errors/{0}");
+
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseRouting();
 app.MapRazorPages();

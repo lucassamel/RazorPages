@@ -12,4 +12,9 @@
     <PackageReference Include="Slugify" Version="0.1.0.20570" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Contact\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
