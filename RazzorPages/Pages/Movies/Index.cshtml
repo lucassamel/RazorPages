@@ -1,0 +1,18 @@
+﻿@page "/movies"
+@model RazorPages.Pages.Movies.IndexModel
+@{
+    ViewData["Title"] = "My Movies";
+}
+
+
+<h1>Movies</h1>
+<ul>
+    @foreach (var movie in Model.Movies)
+    {
+        <li>
+            <a href="/movie/@movie.Permalink">@movie.Name</a>
+        </li>
+    }
+</ul>
+
+
